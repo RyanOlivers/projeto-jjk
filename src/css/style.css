@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'kaisen';
+    font-size: 0.5cm;
+    max-width: 1980px;
+    margin: 0 auto;
+}
+
+.imagem {
+    padding: 5px;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+}
+
+.imagem.ativa {
+    display: block;
+    animation: mudarImagem 0.7s;
+    transform: translateX(300px);
+}
+
+.conteudo {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 150vh;
+}
+
+.informacao {
+    display: none;
+}
+
+.informacao.ativa {
+    display: block;    
+    animation: mudarImagem 2s;
+}
+.informacao h2 {
+    font-size: 50px;
+    padding: 0 5px;
+    margin-bottom: 80px;
+    letter-spacing: 8px;
+    -webkit-text-stroke-width: 0.5px; /* largura da borda */
+    -webkit-text-stroke-color: #000000; /* cor da borda */
+}
+
+.informacao h2:hover {
+    cursor: default;
+}
+
+.informacao .descricao{
+    width: 49vw;
+    line-height: 30px;
+    height: 300px;
+    overflow: auto;
+    padding-right: 15px;
+}
+
+.carrosel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+.botoes-carrosel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    right: 1%;
+    top: 50%;
+    gap: 20px;
+}
+
+.botoes-carrosel .botao {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border: 2px solid transparent;
+    border-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.botoes-carrosel .botao.selecionado {
+    background-color: #54107D;
+}
+
+@font-face {
+    font-family: 'kaisen';
+    src: url('/src/fontes/jujutsu-kaisen/Jujutsu\ Kaisen.ttf');
+}
+
+@keyframes mudarImagem {
+    from {
+        opacity: 0.10;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main::after{
+    content: "";
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0.3) 100%);
+    z-index: -1;
+}
