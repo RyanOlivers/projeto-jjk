@@ -92,7 +92,7 @@ body {
 
 @font-face {
     font-family: 'kaisen';
-    src: url('/src/fontes/jujutsu-kaisen/Jujutsu\ Kaisen.ttf');
+    src: url('/src/fontes/jujutsu-kaisen/JujutsuKaisen.ttf');
 }
 
 @keyframes mudarImagem {
